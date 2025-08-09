@@ -22,10 +22,10 @@ buildscript {
     ext.kotlin_version = '1.9.22'
     repositories {
         google()
-        mavenCentral()
-        maven {
-            url 'http://download.flutter.io'
-        }
+        // mavenCentral()
+        // maven {
+        //     url 'http://download.flutter.io'
+        // }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.1.4'
