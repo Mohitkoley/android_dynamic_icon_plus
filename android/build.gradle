@@ -1,6 +1,9 @@
 group 'com.example.android_dynamic_icon'
 version '1.0-SNAPSHOT'
-def flutterRoot = rootProject.ext.flutterRoot
+def flutterRoot = rootProject.ext.has('flutterRoot') ? rootProject.ext.flutterRoot : null
+if (flutterRoot == null) {
+    throw new GradleException("flutterRoot not found. Make sure you have 'flutter.sdk' in local.properties of the main project.")
+}
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 buildscript {
@@ -8,6 +11,9 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven{
+            url "$flutterRoot/bin/cache/artifacts/engine"
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.1.4'
