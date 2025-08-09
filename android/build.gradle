@@ -37,7 +37,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        mavenCentral()
         maven {
             url 'http://download.flutter.io'
         }
