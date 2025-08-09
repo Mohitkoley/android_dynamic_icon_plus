@@ -10,4 +10,8 @@ class AndroidDynamicIcon {
     await AndroidDynamicIconPlatform.instance
         .changeIcon(classNames: classNames);
   }
+
+  Future<void> resetToDefault() async {
+    await AndroidDynamicIconPlatform.instance.resetToDefault();
+  }
 }
