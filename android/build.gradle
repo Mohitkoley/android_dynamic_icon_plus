@@ -21,11 +21,16 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 buildscript {
     ext.kotlin_version = '1.9.22'
     repositories {
-        google()
-        mavenCentral()
-        maven {
-            url 'http://download.flutter.io'
-        }
+        // google()
+        // mavenCentral()
+        // maven {
+        //     url 'http://download.flutter.io'
+        // }
+
+    maven { url 'https://maven.aliyun.com/repository/google' }
+    maven { url 'https://maven.aliyun.com/repository/jcenter' }
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    maven { url "http://download.flutter.io" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.1.4'
@@ -35,11 +40,15 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        mavenCentral()
-        maven {
-            url 'http://download.flutter.io'
-        }
+        // google()
+        // mavenCentral()
+        // maven {
+        //     url 'http://download.flutter.io'
+        // }
+    maven { url 'https://maven.aliyun.com/repository/google' }
+    maven { url 'https://maven.aliyun.com/repository/jcenter' }
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    maven { url "http://download.flutter.io" }
     }
 }
 
