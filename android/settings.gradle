@@ -1,1 +1,3 @@
 rootProject.name = 'android_dynamic_icon'
+include ':android_dynamic_icon'
+project(':android_dynamic_icon').projectDir = new File('../android_dynamic_icon/android')

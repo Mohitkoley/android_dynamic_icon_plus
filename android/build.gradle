@@ -1,5 +1,7 @@
 group 'com.example.android_dynamic_icon'
 version '1.0-SNAPSHOT'
+def flutterRoot = rootProject.ext.flutterRoot
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 buildscript {
     ext.kotlin_version = '1.9.22'
